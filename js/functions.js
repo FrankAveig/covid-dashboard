@@ -57,15 +57,29 @@ export function researchData(data) {
 }
 
 export function getInfoConfirmed(data, countryName) {
-  const slvInfo = data.filter((item) => {
+  const info = data.filter((item) => {
     if (item.country_code === countryName) {
       return item.confirmed;
     }
   });
 
-  const slvData = slvInfo.map((item) => {
+  const dataGotten = info.map((item) => {
     return item.confirmed;
   });
 
-  return slvData;
+  return dataGotten;
+};
+
+export function getInfoDemise(data, countryName) {
+  const info = data.filter((item) => {
+    if (item.country_code === countryName) {
+      return item.deaths;
+    }
+  });
+
+  const dataGotten = info.map((item) => {
+    return item.deaths;
+  });
+
+  return dataGotten;
 };

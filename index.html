@@ -47,18 +47,6 @@
                       Guatemala
                     </label>
                   </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="NIC" id="nicaragua" checked>
-                    <label class="form-check-label" for="nicaragua">
-                      Nicaragua
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="PA" id="panama" checked>
-                    <label class="form-check-label" for="panama">
-                      Panama
-                    </label>
-                  </div>
 
             </div>
             <div class="column2 col-3 py-3 px-4">
@@ -67,10 +55,15 @@
                 <p class="my-5">Descesos: ####</p>
                 <p class="my-5">Vacundados: ####</p>
             </div>
-            <div class="column3 col-7 py-3 px-2">
+            <div class="column3 col-7 pt-3 px-2">
                 <h3 class="text-center">Detalle por País</h3>
-                <div id="barChartConfirmed">
+                <div id="barChartConfirmed" class="mt-3">
+                  <h4>Casos Confirmados</h4>
                   <canvas id="myChart"></canvas>
+                </div>
+                <div id="lineChartDemise">
+                  <h4>Casos por Desceso</h4>
+                  <canvas id="lineChart"></canvas>
                 </div>
             </div>
         </section>

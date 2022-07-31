@@ -1,5 +1,5 @@
 import { formatDate, researchData } from './functions.js'
-import { chartConfirmed } from './charts.js'
+import { chartConfirmed, chartDemise } from './charts.js'
 
 const url = 'https://covidtrackerapi.bsg.ox.ac.uk/api/v2/stringency/date-range';
 let infoCountries = [];
@@ -26,4 +26,7 @@ export const getDefaultInformation = async () => {
 
     //We call the function for the barChartConfirmed
     chartConfirmed(researchData(data));
+
+    //We call the function for the lineChartDemised
+    chartDemise(researchData(data));
 }
