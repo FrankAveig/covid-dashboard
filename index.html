@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="container-fluid my-4">
-        <h1 class="text-center">Dashboard</h1>
+        <h1 class="text-center">Dashboard - Triangulo Norte Covid-19</h1>
     </header>
     <main class="container">
         <section class="row">
@@ -61,19 +61,24 @@
                   </div>
 
             </div>
-            <div class="column2 col-4 py-3 px-4">
+            <div class="column2 col-3 py-3 px-4">
                 <h3>Panorama General</h3>
                 <p class="my-5">Contagios: ####</p>
                 <p class="my-5">Descesos: ####</p>
                 <p class="my-5">Vacundados: ####</p>
             </div>
-            <div class="column3 col-6 py-3 px-2">
-                <h3>Tercera parte</h3>
+            <div class="column3 col-7 py-3 px-2">
+                <h3 class="text-center">Detalle por País</h3>
+                <div id="barChartConfirmed">
+                  <canvas id="myChart"></canvas>
+                </div>
             </div>
         </section>
     </main>
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.2/dist/chart.min.js"></script>
     <script src="js/main.js" type="module"></script>
+    <script src="js/charts.js" type="module"></script>
 </body>
 </html>
