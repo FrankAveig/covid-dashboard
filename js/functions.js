@@ -1,20 +1,5 @@
-export function generateAxisX(startDate, endDate) {
-  let arrayDate = [];
-  let currentDate = startDate.addDays(1);
-  let lastDay = endDate.addDays(1);
-
-  while (currentDate <= lastDay) {
-    arrayDate.push(currentDate.toLocaleDateString("en-US"));
-    currentDate = currentDate.addDays(1);
-  }
-  return arrayDate;
-}
-
-Date.prototype.addDays = function (days) {
-  var date = new Date(this.valueOf());
-  date.setDate(date.getDate() + days);
-  return date;
-};
+const startDateCld = document.getElementById('start-date');
+const endDateCld = document.getElementById('end-date');
 
 export const formatDate = (date) => {
   let d = new Date(date);
@@ -44,11 +29,8 @@ export function researchData(data) {
 
   let depuredData = consolidatedData.filter((cdata) => {
     return (
-      cdata.country_code === "CRI" ||
       cdata.country_code === "SLV" ||
       cdata.country_code === "GTM" ||
-      cdata.country_code === "NIC" ||
-      cdata.country_code === "PAN" ||
       cdata.country_code === "HND"
     );
   });
@@ -56,6 +38,7 @@ export function researchData(data) {
   return depuredData;
 }
 
+//Get information about confirmed cases
 export function getInfoConfirmed(data, countryName) {
   const info = data.filter((item) => {
     if (item.country_code === countryName) {
@@ -70,6 +53,7 @@ export function getInfoConfirmed(data, countryName) {
   return dataGotten;
 };
 
+// Get information about died cases
 export function getInfoDemise(data, countryName) {
   const info = data.filter((item) => {
     if (item.country_code === countryName) {
@@ -83,3 +67,25 @@ export function getInfoDemise(data, countryName) {
 
   return dataGotten;
 };
+
+// This function set the max of date that we can select in the calendar
+// Due to the API has a delay over 13 days more or less according to the documentation of API
+export function setMaxDays() {
+  const initialDefaultDate = new Date();
+  const finalDefaultDate = new Date();
+
+  initialDefaultDate.setDate(initialDefaultDate.getDate() - 13);
+  finalDefaultDate.setDate(finalDefaultDate.getDate() - 13);
+
+  const startMaxDate = formatDate(initialDefaultDate).toString();
+  const endMaxDate = formatDate(finalDefaultDate).toString();
+
+  startDateCld.max = startMaxDate;
+  endDateCld.max = endMaxDate;
+}
+
+// Clear date form
+export function clearDates() {
+  document.getElementById('start-date').value = "";
+  document.getElementById('end-date').value = "";
+}

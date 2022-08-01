@@ -1,18 +1,27 @@
 import { getInfoConfirmed, getInfoDemise } from './functions.js';
 
-const ctx = document.getElementById('myChart').getContext('2d');
-const ctxLine = document.getElementById('lineChart').getContext('2d');
+let ctx = document.getElementById('myChart').getContext('2d');
+let ctxLine = document.getElementById('lineChart').getContext('2d');
+
+let myChart;
+let lineChart;
 
 export function chartConfirmed(data) {
 
-    const uniqueDates =  [... new Set(data.map(item => item.date_value))];
-    console.log(uniqueDates);
+    //This method destroy the chart if it was created.
+    if(myChart instanceof Chart)
+    {
+        myChart.destroy();
+    }
+
+    // Look for the unique dates from JSON File
+    let uniqueDates =  [... new Set(data.map(item => item.date_value))];
 
     let slvData = getInfoConfirmed(data, 'SLV');
     let gtmData = getInfoConfirmed(data, 'GTM');
     let hndData = getInfoConfirmed(data, 'HND');
 
-    const myChart = new Chart(ctx, {
+    myChart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: uniqueDates, //imprime las fechas
@@ -52,14 +61,20 @@ export function chartConfirmed(data) {
 
 export function chartDemise(data) {
 
+    //This method destroy the chart if it was created.
+    if(lineChart instanceof Chart)
+    {
+        lineChart.destroy();
+    }
+
+    // Look for the unique dates from JSON File 
     const uniqueDates =  [... new Set(data.map(item => item.date_value))];
-    console.log(uniqueDates);
 
     let slvData = getInfoDemise(data, 'SLV');
     let gtmData = getInfoDemise(data, 'GTM');
     let hndData = getInfoDemise(data, 'HND');
 
-    const lineChart = new Chart(ctxLine, {
+    lineChart = new Chart(ctxLine, {
         type: 'line',
         data: {
             labels: uniqueDates, //imprime las fechas
