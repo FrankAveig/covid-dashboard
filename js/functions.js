@@ -35,6 +35,7 @@ export function researchData(data) {
     );
   });
 
+  //Devuelve la data ya depurada creando el archivo JSON que se va a consumir
   return depuredData;
 }
 

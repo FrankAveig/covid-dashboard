@@ -20,10 +20,15 @@ export const getDefaultInformation = async () => {
     const inicio = formatDate(initialDefaultDate).toString();
     const fin = formatDate(finalDefaultDate).toString();
 
+    //Esto extrae la data original del API, es una data
+    //Pero se esa data se manda para la funcion researchData
+    //donde extrae solo la informacion que necesitamos
     const {data: {data}} = await axios.get(`${url}/${inicio}/${fin}`);
+    console.log('Esta es la data original del API');
     console.log(data);
 
     //Get the selected information from de JSON File
+    console.log('Esta es la data depurada que se usa para el dashboard');
     console.log(researchData(data));
 
     //We call the function for the barChartConfirmed
