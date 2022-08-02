@@ -1,4 +1,5 @@
 import { getInfoConfirmed, getInfoDemise } from './functions.js';
+import {country_1 , country_2, country_3} from './getData.js';
 
 let ctx = document.getElementById('myChart').getContext('2d');
 let ctxLine = document.getElementById('lineChart').getContext('2d');
@@ -17,9 +18,9 @@ export function chartConfirmed(data) {
     // Look for the unique dates from JSON File
     let uniqueDates =  [... new Set(data.map(item => item.date_value))];
 
-    let slvData = getInfoConfirmed(data, 'SLV');
-    let gtmData = getInfoConfirmed(data, 'GTM');
-    let hndData = getInfoConfirmed(data, 'HND');
+    let slvData = getInfoConfirmed(data, country_1.value);
+    let gtmData = getInfoConfirmed(data, country_2.value);
+    let hndData = getInfoConfirmed(data, country_3.value);
 
     myChart = new Chart(ctx, {
         type: 'bar',
@@ -27,21 +28,21 @@ export function chartConfirmed(data) {
             labels: uniqueDates, //imprime las fechas
             datasets: [
                 {
-                    label: 'El Salvador',
+                    label: country_1.value,
                     data: slvData,
                     backgroundColor: 'rgba(182, 238, 189, 0.9)',
                     borderColor: 'rgba(182, 238, 189, 1)',
                     borderWidth: 1
                 },
                 {
-                    label: 'Guatemala',
+                    label: country_2.value,
                     data: gtmData,
                     backgroundColor: 'rgba(196, 199, 250, 0.9)',
                     borderColor: 'rgba(196, 199, 250, 1)',
                     borderWidth: 1
                 },
                 {
-                    label: 'Honduras',
+                    label: country_3.value,
                     data: hndData,
                     backgroundColor: 'rgba(31, 31, 31, 0.9)',
                     borderColor: 'rgba(31, 31, 31, 1)',

@@ -20,6 +20,9 @@ export const getDefaultInformation = async () => {
     const inicio = formatDate(initialDefaultDate).toString();
     const fin = formatDate(finalDefaultDate).toString();
 
+    startDateInput.value = inicio;
+    endDateInput.value=fin;
+
     //Esto extrae la data original del API, es una data
     //Pero se esa data se manda para la funcion researchData
     //donde extrae solo la informacion que necesitamos

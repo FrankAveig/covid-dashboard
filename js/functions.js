@@ -1,5 +1,6 @@
 const startDateCld = document.getElementById('start-date');
 const endDateCld = document.getElementById('end-date');
+import {country_1 , country_2, country_3} from './getData.js';
 
 export const formatDate = (date) => {
   let d = new Date(date);
@@ -29,9 +30,9 @@ export function researchData(data) {
 
   let depuredData = consolidatedData.filter((cdata) => {
     return (
-      cdata.country_code === "SLV" ||
-      cdata.country_code === "GTM" ||
-      cdata.country_code === "HND"
+      cdata.country_code === country_1.value ||
+      cdata.country_code === country_2.value ||
+      cdata.country_code === country_3.value
     );
   });
 
