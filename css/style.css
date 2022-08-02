@@ -104,12 +104,19 @@ select{
   }
   #barChartConfirmed{
     width: 300px!important;
+    margin: auto;
   }
   #lineChartDemise{
     width: 300px!important;
+    margin: auto;
 
   }
   .column3{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    text-align: center;
     overflow-x: scroll;
   }
 }
