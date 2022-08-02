@@ -18,10 +18,10 @@ export function chartConfirmed(data) {
     // Look for the unique dates from JSON File
     let uniqueDates =  [... new Set(data.map(item => item.date_value))];
 
-    let slvData = getInfoConfirmed(data, country_1.value);
-    let gtmData = getInfoConfirmed(data, country_2.value);
-    let hndData = getInfoConfirmed(data, country_3.value);
-
+    let dataCountry1 = getInfoConfirmed(data, country_1.value);
+    let dataCountry2 = getInfoConfirmed(data, country_2.value);
+    let dataCountry3 = getInfoConfirmed(data, country_3.value);
+  
     myChart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -29,21 +29,21 @@ export function chartConfirmed(data) {
             datasets: [
                 {
                     label: country_1.value,
-                    data: slvData,
+                    data: dataCountry1,
                     backgroundColor: 'rgba(182, 238, 189, 0.9)',
                     borderColor: 'rgba(182, 238, 189, 1)',
                     borderWidth: 1
                 },
                 {
                     label: country_2.value,
-                    data: gtmData,
+                    data: dataCountry2,
                     backgroundColor: 'rgba(196, 199, 250, 0.9)',
                     borderColor: 'rgba(196, 199, 250, 1)',
                     borderWidth: 1
                 },
                 {
                     label: country_3.value,
-                    data: hndData,
+                    data: dataCountry3,
                     backgroundColor: 'rgba(31, 31, 31, 0.9)',
                     borderColor: 'rgba(31, 31, 31, 1)',
                     borderWidth: 1
@@ -71,9 +71,9 @@ export function chartDemise(data) {
     // Look for the unique dates from JSON File 
     const uniqueDates =  [... new Set(data.map(item => item.date_value))];
 
-    let slvData = getInfoDemise(data, 'SLV');
-    let gtmData = getInfoDemise(data, 'GTM');
-    let hndData = getInfoDemise(data, 'HND');
+    let dataCountry1 = getInfoDemise(data, country_1.value);
+    let dataCountry2 = getInfoDemise(data, country_2.value);
+    let dataCountry3 = getInfoDemise(data, country_3.value);
 
     lineChart = new Chart(ctxLine, {
         type: 'line',
@@ -82,21 +82,21 @@ export function chartDemise(data) {
             datasets: [
                 {
                     label: 'El Salvador',
-                    data: slvData,
+                    data: dataCountry1,
                     fill: false,
                     borderColor: 'rgba(182, 238, 189, 1)',
                     tension: 0.1
                 },
                 {
                     label: 'Guatemala',
-                    data: gtmData,
+                    data: dataCountry2,
                     fill: false,
                     borderColor: 'rgba(196, 199, 250, 1)',
                     tension: 0.1
                 },
                 {
                     label: 'Honduras',
-                    data: hndData,
+                    data: dataCountry3,
                     fill: false,
                     borderColor: 'rgba(31, 31, 31, 1)',
                     tension: 0.1

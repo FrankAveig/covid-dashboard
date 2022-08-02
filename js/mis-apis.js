@@ -1,11 +1,12 @@
 import { formatDate, researchData, clearDates, setMaxDays } from './functions.js'
 import { chartConfirmed, chartDemise } from './charts.js'
-
+import { getDataSelect} from './getData.js'
 const startDateInput = document.getElementById('start-date');
 const endDateInput = document.getElementById('end-date');
-
 const url = 'https://covidtrackerapi.bsg.ox.ac.uk/api/v2/stringency/date-range';
+const url_vacunados ='https://covid-api.mmediagroup.fr/v1/cases?country=France'
 let infoCountries = [];
+
 
 //Function gets default days due to the API has a delay over 10 days of real time information.
 export const getDefaultInformation = async () => {
@@ -27,12 +28,9 @@ export const getDefaultInformation = async () => {
     //Pero se esa data se manda para la funcion researchData
     //donde extrae solo la informacion que necesitamos
     const {data: {data}} = await axios.get(`${url}/${inicio}/${fin}`);
-    console.log('Esta es la data original del API');
-    console.log(data);
+   
 
-    //Get the selected information from de JSON File
-    console.log('Esta es la data depurada que se usa para el dashboard');
-    console.log(researchData(data));
+    
 
     //We call the function for the barChartConfirmed
     chartConfirmed(researchData(data));
@@ -55,4 +53,12 @@ export const generateInfoDates = async () => {
     chartDemise(researchData(data));
 
     clearDates();    
+}
+
+export const defaultInformationChart2 = ()=>{
+  
+    
+  console.log(getDataSelect())
+   
+
 }
