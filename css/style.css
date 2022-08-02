@@ -1,5 +1,29 @@
 body {
   background-color: rgb(213, 212, 230);
+  font-family: 'Battambang', cursive;
+  font-weight: 100;
+
+}
+
+header{
+  font-family: 'Unica One', cursive;
+
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  margin-bottom: 0;
+}
+i{
+  color: #7FCCB8;
+  font-size: 40px;
+  margin: auto 20px;
+}
+main h4{
+  text-transform: uppercase;
 }
 
 .contenedor {
@@ -13,21 +37,57 @@ body {
 }
 
 .column2 {
-  background-color: rgb(248, 248, 248);
+  background-color: #f2f2f2;
+  font-weight: 400;
   min-height: 30rem;
+}
+
+.column2 h3{
+  margin: 40px auto;
+  text-transform:uppercase ;
+  font-size: 1.6rem;
 }
 
 .column3 {
   background-color: rgb(255, 255, 255);
   min-height: 30rem;
 }
+.column3 h3{
+  margin: 40px auto;
+  text-transform: uppercase;
+  font-size: 1.6rem;
 
-#barChartConfirmed {
-  width: 700px;
-  height: 400px;
 }
 
-#lineChartDemise {
-  width: 700px;
-  height: 400px;
+.column3 h4{
+  text-transform: capitalize;
+}
+
+
+
+@media(max-width: 800px){
+  header{
+    flex-direction: column;
+  }
+  i{
+    margin-bottom: 20px;
+  }
+  .column1{
+    min-height:min-content;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .form-control{
+    width: 50%;
+    margin: auto;
+  }
+  button{
+    width: 50%;
+    margin: auto;
+  }
+  select{
+    width: 50%!important;
+    margin: auto auto 30px auto;
+  }
 }

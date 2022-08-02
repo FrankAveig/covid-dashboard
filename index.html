@@ -5,30 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid 19 - Central America</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Unica+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-    <header class="container-fluid my-4">
-        <h1 class="text-center">Dashboard - Triangulo Norte Covid-19</h1>
+    <header class="container py-3 px-4">
+            <i class="fa-solid fa-virus-covid"></i>
+            <h1 class="text-center">Dashboard - Latinoamerica Covid-19</h1>
     </header>
     <main class="container">
-        <section class="row">
-            <div class="column1 col-2 py-3 px-3">
+        <section class="row px-4 px-lg-0">
+            <div class="column1 col-12 col-lg-2 py-3 px-3">
                 <h4 class="text-center">Covid-19</h4>
-                <p class="mt-5">Seleccione rango:</p>
-                <div class="my-3">
-                    <label for="start-date" class="form-label">Fecha de Inicio:</label>
-                    <input type="date" class="form-control" id="start-date">
-                </div>
-                <div class="mb-3">
-                    <label for="end-date" class="form-label">Fecha de Fin:</label>
-                    <input type="date" class="form-control" id="end-date" max="2022-07-18">
-                </div>
-                
-                <button id="getInfoBtn" class="btn btn-primary">Submit</button>
+               
 
-                <p class="mt-5">Selecione Paises:</p>
+                <p class="mt-1 mt-lg-4">Selecione Paises:</p>
                 <select  id="country-1" class="form-select form-select-sm" aria-label=".form-select-sm example">
                   <option value="ARG">Argentina</option>
                   <option value="BOL">Bolivia</option>
@@ -58,7 +54,6 @@
               </select>
 
                 <select id="country-2" class="form-select form-select-sm" aria-label=".form-select-sm example">
-                  <option value="Vacio">Open this select menu</option>
                   <option value="ARG">Argentina</option>
                   <option value="BOL">Bolivia</option>
                   <option value="BRA">Brasil</option>
@@ -113,21 +108,31 @@
                   <option value="URY">Uruguay</option>
                   <option value="VEN">Venezuela</option>
               </select>
-
+              <p class="mt-2 mt-lg-3">Seleccione rango:</p>
+              <div class=" my-0 my-lg-3">
+                  <label for="start-date" class="form-label">Fecha de Inicio:</label>
+                  <input type="date" class="form-control" id="start-date">
+              </div>
+              <div class="mb-3">
+                  <label for="end-date" class="form-label">Fecha de Fin:</label>
+                  <input type="date" class="form-control" id="end-date" max="2022-07-18">
+              </div>
+              
+              <button id="getInfoBtn" class="btn btn-primary mb-3">Submit</button>
             </div>
-            <div class="column2 col-3 py-3 px-4">
+            <div class="column2 col-12 col-lg-3 py-3 px-4">
                 <h3>Panorama General</h3>
                 <p class="my-5">Contagios: ####</p>
                 <p class="my-5">Descesos: ####</p>
                 <p class="my-5">Vacundados: ####</p>
             </div>
-            <div class="column3 col-7 pt-3 px-2">
+            <div class="column3 col-12 col-lg-7 pt-3 px-2">
                 <h3 class="text-center">Detalle por País</h3>
-                <div id="barChartConfirmed" class="mt-3">
+                <div  id="barChartConfirmed" class="mt-3 mx-5">
                   <h4>Casos Confirmados</h4>
                   <canvas id="myChart"></canvas>
                 </div>
-                <div id="lineChartDemise">
+                <div class="mt-5 mx-5" id="lineChartDemise">
                   <h4>Casos por Desceso</h4>
                   <canvas id="lineChart"></canvas>
                 </div>
@@ -135,6 +140,8 @@
         </section>
     </main>
     <footer></footer>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/solid.js" integrity="sha384-/BxOvRagtVDn9dJ+JGCtcofNXgQO/CCCVKdMfL115s3gOgQxWaX/tSq5V8dRgsbc" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/fontawesome.js" integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.2/dist/chart.min.js"></script>
     <script src="js/main.js" type="module"></script>
