@@ -137,9 +137,9 @@ export const chartVaccinated= (data)=> {
                 label: 'My First Dataset',
                 data: [data[0].vaccinated, data[1].vaccinated, data[2].vaccinated],
                 backgroundColor: [
-                    'rgb(255, 99, 132)',
-                    'rgb(54, 162, 235)',
-                    'rgb(255, 205, 86)'
+                    'rgba(182, 238, 189, 1)',
+                    'rgba(196, 199, 250, 1)',
+                    'rgba(31, 31, 31, 1)'
                 ],
                 hoverOffset: 4
             }]

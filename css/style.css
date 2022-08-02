@@ -39,13 +39,11 @@ select{
 .column1 {
   color: rgb(205, 206, 238);
   background-color: rgb(18, 19, 28);
-  min-height: 30rem;
 }
 
 .column2 {
   background-color: #f2f2f2;
   font-weight: 400;
-  min-height: 30rem;
 }
 
 .column2 h3{
@@ -56,7 +54,6 @@ select{
 
 .column3 {
   background-color: rgb(255, 255, 255);
-  min-height: 30rem;
 }
 .column3 h3{
   margin: 40px auto;
@@ -84,6 +81,15 @@ select{
     flex-direction: column;
     text-align: center;
   }
+  .column2{
+    text-align: center;
+  }
+  .chart-vacunados{
+    margin-bottom: 40px!important;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+  }
   .form-control{
     width: 50%;
     margin: auto;
@@ -95,5 +101,15 @@ select{
   select{
     width: 50%!important;
     margin: auto auto 30px auto;
+  }
+  #barChartConfirmed{
+    width: 300px!important;
+  }
+  #lineChartDemise{
+    width: 300px!important;
+
+  }
+  .column3{
+    overflow-x: scroll;
   }
 }
