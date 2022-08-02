@@ -7,23 +7,29 @@ body {
 
 header{
   font-family: 'Unica One', cursive;
-
   font-weight: 600;
   text-transform: uppercase;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 h1{
   margin-bottom: 0;
 }
+
 i{
   color: #7FCCB8;
   font-size: 40px;
   margin: auto 20px;
 }
+
 main h4{
   text-transform: uppercase;
+}
+
+select{
+  margin: auto auto 5px auto;
 }
 
 .contenedor {
