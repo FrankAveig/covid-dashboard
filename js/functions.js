@@ -1,6 +1,10 @@
+import {country_1 , country_2, country_3, getDataSelect,contagiosGeneral,descesos} from './getDataDom.js';
+import {chartVaccinated } from './charts.js'
+
+
 const startDateCld = document.getElementById('start-date');
 const endDateCld = document.getElementById('end-date');
-import {country_1 , country_2, country_3} from './getData.js';
+const url_vacunados ='https://covid-api.mmediagroup.fr/v1//vaccines';
 
 export const formatDate = (date) => {
   let d = new Date(date);
@@ -91,3 +95,36 @@ export function clearDates() {
   document.getElementById('start-date').value = "";
   document.getElementById('end-date').value = "";
 }
+//This function gets the index of the selected option in the "select" tag
+export const getIndexSelect = ()=>{
+  const indexCountry1 = country_1.options.selectedIndex;
+  const indexCountry2 = country_2.options.selectedIndex;
+  const indexCountry3 = country_3.options.selectedIndex;
+  return [indexCountry1,indexCountry2,indexCountry3];
+  }
+
+  //this function get the info of the people vaccinated filtered by the countries selected
+export const getVaccinated = async()=>{
+  const {data} = await axios.get(url_vacunados);
+  const countries = getDataSelect(getIndexSelect());
+  const vaccinated = [
+  {
+    country:countries[0],
+    vaccinated:data[countries[0]].All.people_vaccinated,
+  },
+  {
+    country:countries[1],
+    vaccinated:data[countries[1]].All.people_vaccinated,
+  },
+  {
+    country:countries[2],
+    vaccinated:data[countries[2]].All.people_vaccinated,
+  }]
+  chartVaccinated(vaccinated);
+  setVacunados(vaccinated[0].vaccinated,vaccinated[1].vaccinated,vaccinated[2].vaccinated);
+}
+
+//this function put the general information
+export const setContagios=(data1,data2,data3)=>contagiosGeneral.innerHTML=`Contagios: ${data1+data2+data3}`;
+export const setDecesos=(data1,data2,data3)=>descesos.innerHTML=`Descesos: ${data1+data2+data3}`;
+const setVacunados=(data1,data2,data3)=>vacunados.innerHTML=`Vacunados ${data1+data2+data3}`;
