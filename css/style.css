@@ -103,11 +103,12 @@ select{
     margin: auto auto 30px auto;
   }
   #barChartConfirmed{
-    width: 300px!important;
+    width: 500px!important;
     margin: auto;
+    margin-bottom: 50px;
   }
   #lineChartDemise{
-    width: 300px!important;
+    width: 500px!important;
     margin: auto;
 
   }
