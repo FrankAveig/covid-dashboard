@@ -121,3 +121,58 @@ select{
     overflow-x: scroll;
   }
 }
+footer{
+  margin-top:40px;
+  background-color: #262b32;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+footer h2{
+  font-size:24px ;
+  margin-bottom: 0;
+}
+.developed{
+  margin-top: 20px;
+  align-items: center;
+  text-align: center;
+}
+.apis{
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+.api{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.api a{
+  color: white;
+  text-decoration: none;
+}
+
+.container_footer{
+  display: flex;
+}
+.dev{
+  display: flex;
+  align-items: center;
+  margin: 10px 10px 20px 10px;
+}
+.dev p{
+  margin: 5px;
+}
+.dev i{
+  font-size: 20px;
+  color: white;
+  margin: 0;
+}
+
+.container_footer img {
+  width: 40px;
+  border-radius: 50px;
+}

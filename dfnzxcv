@@ -1,0 +1,71 @@
+[33mcommit 9c8bf7e6299f70c94380dca16f9d3490ebe7b36d[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: Frank Aveiga <68234079+FrankAveig@users.noreply.github.com>
+Date:   Tue Aug 2 18:18:21 2022 -0500
+
+    cambio de color al chart de dona
+
+[33mcommit b5d04b5b3e234a000531b2c6b4cc7fb2b0888dc4[m
+Author: Frank Aveiga <68234079+FrankAveig@users.noreply.github.com>
+Date:   Tue Aug 2 17:53:26 2022 -0500
+
+    funcionalidad de la segunda API terminada con el chart
+
+[33mcommit d42042faec6576f81bc39a6779af0041542d55b6[m
+Author: Frank Aveiga <68234079+FrankAveig@users.noreply.github.com>
+Date:   Tue Aug 2 12:45:53 2022 -0500
+
+    obteniendo datos para segunda API
+
+[33mcommit cbee8fbd1600ac016964a161a6332f78c59200d0[m
+Author: Frank Aveiga <68234079+FrankAveig@users.noreply.github.com>
+Date:   Tue Aug 2 04:52:32 2022 -0500
+
+    pequeno cambio
+
+[33mcommit c079d33f3396c865d8b561d4de6587e0bccad81d[m
+Author: Frank Aveiga <68234079+FrankAveig@users.noreply.github.com>
+Date:   Tue Aug 2 04:50:51 2022 -0500
+
+    responsive para celular listo
+
+[33mcommit 6bcd5a79cfb8e007ad3b029aa01ad79c21bcfabc[m
+Author: Frank Aveiga <68234079+FrankAveig@users.noreply.github.com>
+Date:   Mon Aug 1 20:28:39 2022 -0500
+
+    Agregado todos los paises de Latinoamerica y setiando por defencto las fechas en la parte visual
+
+[33mcommit 3848a9d09d3810c8aca41d6a762c9139e1aa76a2[m
+Author: Eder Ramos <eder.ramosh@gmail.com>
+Date:   Sun Jul 31 21:09:40 2022 -0600
+
+    Se actualizan comentario de las funciones que depuran la data del API
+
+[33mcommit f5de385798612c05460c821d57b18d043c5d5f43[m
+Author: Eder Ramos <eder.ramosh@gmail.com>
+Date:   Sun Jul 31 20:58:18 2022 -0600
+
+    Se depura function AxisX y se implementa seleccion de fechas
+
+[33mcommit c5a5ca8773ca9a01050aa8ad6d55c803d0634cce[m
+Author: Eder Ramos <eder.ramosh@gmail.com>
+Date:   Sun Jul 31 17:34:09 2022 -0600
+
+    segundo chart
+
+[33mcommit 062a59e96daa24e2be0f78852ad9ba33a09eb998[m
+Author: Eder Ramos <eder.ramosh@gmail.com>
+Date:   Sun Jul 31 00:11:44 2022 -0600
+
+    JSON resuelto y primer chat terminado
+
+[33mcommit 416581e81fcf931579984ee81fa0ad2b31ff6cae[m
+Author: Eder Ramos <eder.ramosh@gmail.com>
+Date:   Sat Jul 30 19:16:37 2022 -0600
+
+    Avance de codigo js
+
+[33mcommit 10819f233c32d08e04b54db513477c0f21b24265[m
+Author: Eder Ramos <eder.ramosh@gmail.com>
+Date:   Mon Jul 25 21:37:41 2022 -0600
+
+    Inicializando proyecto
