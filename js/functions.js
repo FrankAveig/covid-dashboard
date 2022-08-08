@@ -80,8 +80,8 @@ export function setMaxDays() {
   const initialDefaultDate = new Date();
   const finalDefaultDate = new Date();
 
-  initialDefaultDate.setDate(initialDefaultDate.getDate() - 13);
-  finalDefaultDate.setDate(finalDefaultDate.getDate() - 13);
+  initialDefaultDate.setDate(initialDefaultDate.getDate() - 20);
+  finalDefaultDate.setDate(finalDefaultDate.getDate() - 20);
 
   const startMaxDate = formatDate(initialDefaultDate).toString();
   const endMaxDate = formatDate(finalDefaultDate).toString();

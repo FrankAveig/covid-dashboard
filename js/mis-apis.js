@@ -13,8 +13,8 @@ export const getDefaultInformation = async () => {
     const initialDefaultDate = new Date();
     const finalDefaultDate = new Date();
 
-    initialDefaultDate.setDate(initialDefaultDate.getDate() - 18);
-    finalDefaultDate.setDate(finalDefaultDate.getDate() - 13);
+    initialDefaultDate.setDate(initialDefaultDate.getDate() - 25);
+    finalDefaultDate.setDate(finalDefaultDate.getDate() - 18);
 
     const inicio = formatDate(initialDefaultDate).toString();
     const fin = formatDate(finalDefaultDate).toString();
@@ -56,10 +56,12 @@ export const generateInfoDates = async () => {
     const endDate = new Date(endDateInput.value);
 
     const {data: {data}} = await axios.get(`${url}/${startDateInput.value}/${endDateInput.value}`);
-
+    console.log('data original');
+    console.log(data);
     //We call the function for the barChartConfirmed
     chartConfirmed(researchData(data));
-
+    console.log('data depurada');
+    console.log(researchData(data));
     //We call the function for the lineChartDemised
     chartDemise(researchData(data));
 
